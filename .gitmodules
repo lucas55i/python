@@ -1,0 +1,20 @@
+[submodule "poo"]
+	path = poo
+	url = https://github.com/lucas55i/poo.git
+	branch = developer
+
+[submodule "oauth2"]
+	path = oauth2
+	url = https://github.com/lucas55i/oauth2.git
+	branch = developer
+
+[submodule "fast_api_amigos_code"]
+	path = fast_api_amigos_code
+	url = https://github.com/lucas55i/fast_api_amigos_code.git
+	branch = developer
+
+
+[submodule "algorimos_livro"]
+	path = algorimos_livro
+	url = https://github.com/lucas55i/algorimos_livro.git
+	branch = developer
