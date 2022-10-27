@@ -1,1 +1,9 @@
-/.idea
+/**/venv/
+/**/.venv/
+/**/.idea/
+/**/.code/
+/**/.vscode/
+/**/.vs/
+/**/.pytest_cache/
+/**/__pycache__/
+/**/log-database.db
