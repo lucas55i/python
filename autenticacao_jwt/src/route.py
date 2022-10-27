@@ -9,7 +9,6 @@ route_bp = Blueprint('route', __name__)
 
 @route_bp.route("/secret", methods=["GET"])
 def secret_route():
-
     raw_token = request.headers.get("Authorization")
     uid = request.headers.get("uid")
 
@@ -20,7 +19,7 @@ def secret_route():
 
     try:
         token = raw_token.split()[1]
-        token_information= jwt.decode(token, key="1234", algorithms="HS256")
+        token_information = jwt.decode(token, key="1234", algorithms="HS256")
         token_uid = token_information['uid']
     except jwt.InvalidSignatureError:
         return jsonify({
@@ -30,8 +29,8 @@ def secret_route():
         return jsonify({
             'error': "Token Expirado"
         }), 401
-    except KeyError as e :
-                return jsonify({
+    except KeyError as e:
+        return jsonify({
             'error': "Token Invalido2"
         }), 401
 
@@ -39,7 +38,6 @@ def secret_route():
         return jsonify({
             'error': "Usuário Não Permitido"
         }), 401
-    
 
     # Devemos chegar aqui
     return jsonify({
